@@ -11,13 +11,6 @@ interface Direccion{
 }
 
 
-
-
-
-
-
-
-
 export const ObjectLiteral = () => {
 
     const person : Person = {
