@@ -1,16 +1,9 @@
-import { useState } from 'react';
+import { useCounter } from '../hooks/useCounter';
 
 export const Counter = () => {
 
-    const [ value, setValue] = useState<number>(0)
+    const { decrement, increment, value} = useCounter()
 
-    const increment = ( number: number)  => {
-        setValue( value + number)
-    }
-
-    const decrement = ( number: number)  => {
-        setValue( value - number)
-    }
 
 
   return (
