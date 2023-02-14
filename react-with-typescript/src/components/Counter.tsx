@@ -2,7 +2,7 @@ import { useCounter } from '../hooks/useCounter';
 
 export const Counter = () => {
 
-    const { decrement, increment, value} = useCounter()
+    const { decrement, increment, value} = useCounter(4)
 
 
 

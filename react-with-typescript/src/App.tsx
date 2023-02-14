@@ -1,8 +1,10 @@
 // import { BasicTypes } from './typescript/BasicTypes';
 // import { ObjectLiteral } from "./typescript/ObjectLiteral"
 // import { Functions } from "./typescript/Functions"
+// import { Counter } from "./components/Counter"
 
-import { Counter } from "./components/Counter"
+
+import { Login } from './components/Login';
 
 function App() {
 
@@ -14,7 +16,8 @@ function App() {
         {/* <BasicTypes/> */}
         {/* <ObjectLiteral/> */}
         {/* <Functions/> */}
-        <Counter/>
+        {/* <Counter/> */}
+        <Login/>
     </div>
   )
 }
