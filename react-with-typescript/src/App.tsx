@@ -2,9 +2,8 @@
 // import { ObjectLiteral } from "./typescript/ObjectLiteral"
 // import { Functions } from "./typescript/Functions"
 // import { Counter } from "./components/Counter"
-
-
-import { Login } from './components/Login';
+// import { Login } from './components/Login';
+import { Users } from "./components/Users"
 
 function App() {
 
@@ -17,7 +16,8 @@ function App() {
         {/* <ObjectLiteral/> */}
         {/* <Functions/> */}
         {/* <Counter/> */}
-        <Login/>
+        {/* <Login/> */}
+        <Users/>
     </div>
   )
 }
