@@ -3,7 +3,8 @@
 // import { Functions } from "./typescript/Functions"
 // import { Counter } from "./components/Counter"
 // import { Login } from './components/Login';
-import { Users } from "./components/Users"
+import { Forms } from "./components/Forms"
+// import { Users } from "./components/Users"
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
         {/* <Functions/> */}
         {/* <Counter/> */}
         {/* <Login/> */}
-        <Users/>
+        {/* <Users/> */}
+        <Forms/>
     </div>
   )
 }
