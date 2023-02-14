@@ -1,7 +1,8 @@
 // import { BasicTypes } from './typescript/BasicTypes';
 // import { ObjectLiteral } from "./typescript/ObjectLiteral"
+// import { Functions } from "./typescript/Functions"
 
-import { Functions } from "./typescript/Functions"
+import { Counter } from "./components/Counter"
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
         <span className='border-2 border-black w-full my-2 block'></span>
         {/* <BasicTypes/> */}
         {/* <ObjectLiteral/> */}
-        <Functions/>
+        {/* <Functions/> */}
+        <Counter/>
     </div>
   )
 }
