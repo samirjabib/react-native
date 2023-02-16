@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet, TouchableNativeFeedback } from "react-native"
+import { View, Text, TouchableOpacity, StyleSheet, TouchableNativeFeedback, Platform } from "react-native"
 
 
 interface Props{
@@ -9,26 +9,52 @@ interface Props{
 
 export const Fab = ({title, onPress, position }:Props) => {
 
-
-    return(
-        <View
-            style={[
-                styles.fabLocation,
-                (position === "bl") ? styles.left : styles.right
-            ]}
-        >
-            <TouchableNativeFeedback
-                onPress={onPress}
-                background={TouchableNativeFeedback.Ripple('blue', true, 30)}
+    const ios = () => {
+        return(
+            <View
+                style={[
+                    styles.fabLocation,
+                    (position === "bl") ? styles.left : styles.right
+                ]}
             >
-                <View style={styles.fab}>
-                    <Text style={styles.textButton}>{title}</Text>
-                </View>
-            </TouchableNativeFeedback>
-        </View>
+                {/* Usamos touchableOpacity en IOS para los botones  */}
+                <TouchableOpacity
+                    onPress={onPress}
+                    activeOpacity={0.75}
+                >
+                    <View style={styles.fab}>
+                        <Text style={styles.textButton}>{title}</Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
+        )
+    }
 
+    const android = () => {
+        return(
+            <View
+                style={[
+                    styles.fabLocation,
+                    (position === "bl") ? styles.left : styles.right
+                ]}
+            >
+                {/* Usamos touchableOpacity en IOS para los botones  */}
 
-    )
+                <TouchableNativeFeedback
+                    onPress={onPress}
+                    background={TouchableNativeFeedback.Ripple('blue', true, 30)}
+                    
+                >
+                    <View style={styles.fab}>
+                        <Text style={styles.textButton}>{title}</Text>
+                    </View>
+                </TouchableNativeFeedback>
+            </View>
+        )
+
+    }
+
+    return (Platform.OS ==="ios") ? ios() : android()
 }
 
 const styles= StyleSheet.create({
