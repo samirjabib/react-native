@@ -5,7 +5,7 @@ import { Fab } from "../components"
 
  export const CounterScreen = () => {
 
-  const [counter, setCounter] = useState<number>(0)
+  const [counter, setCounter] = useState<number>(4)
 
 
   return(
@@ -16,11 +16,19 @@ import { Fab } from "../components"
 
       <Fab
         title="+1"
-      />
+        onPress={ () => setCounter(counter + 1)}
+        position="br"
+        
+      /> 
+
 
       <Fab
         title="-1"
-      />
+        onPress={ () => setCounter(counter - 1)}
+        position="bl"
+      /> 
+
+   
 
     </View>
   )
@@ -35,28 +43,6 @@ const styles = StyleSheet.create({
     fontSize:40,
     textAlign:"center",
   },
-  fabLocationBL:{
-    position:"absolute",
-    bottom:0,
-    right:0,
-  },
-  fabLocationBR:{
-    position:"absolute",
-    bottom:10,
-    left:0,
-  },
-  fab:{
-    backgroundColor:"red",
-    with:60,
-    height:60,
-    width:60,
-    borderRadius:100,
-    justifyContent:"center"
-  },
-  textButton:{
-    textAlign:"center",
-    fontSize:25,
-    alignSelf:"center"
-  }
+
 })
 
