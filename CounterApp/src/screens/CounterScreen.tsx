@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { View, Text,  Button, TouchableOpacity } from "react-native"
+import { View, Text,  StyleSheet, TouchableOpacity } from "react-native"
+import { Fab } from "../components"
 
 
  export const CounterScreen = () => {
@@ -7,38 +8,55 @@ import { View, Text,  Button, TouchableOpacity } from "react-native"
   const [counter, setCounter] = useState<number>(0)
 
 
-
-
   return(
-    <View
-      style={{
-        flex:1,
-        justifyContent:"center"
-      }}
-    >
-      <Text
-        style={{
-          textAlign:"center",
-          fontSize:40,
-        }}
-      >
+    <View style={styles.container}>
+      <Text style={styles.text}>
         Counter:{counter}
       </Text>
 
-      <TouchableOpacity
-        onPress={ () =>  setCounter(counter - 1 )}
-      >
-        <Text>on Click</Text>
-      </TouchableOpacity>
+      <Fab
+        title="+1"
+      />
 
-      
-      <TouchableOpacity
-        onPress={ () =>  setCounter(counter + 2)}
-      >
-        <Text>on Click</Text>
-      </TouchableOpacity>
+      <Fab
+        title="-1"
+      />
 
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    justifyContent:"center"
+  },
+  text:{
+    fontSize:40,
+    textAlign:"center",
+  },
+  fabLocationBL:{
+    position:"absolute",
+    bottom:0,
+    right:0,
+  },
+  fabLocationBR:{
+    position:"absolute",
+    bottom:10,
+    left:0,
+  },
+  fab:{
+    backgroundColor:"red",
+    with:60,
+    height:60,
+    width:60,
+    borderRadius:100,
+    justifyContent:"center"
+  },
+  textButton:{
+    textAlign:"center",
+    fontSize:25,
+    alignSelf:"center"
+  }
+})
 
