@@ -1,21 +1,25 @@
-import { SafeAreaView, StyleSheet } from 'react-native';
-import { BoxObjectModelScreen, DimensionesScreen, PositionScreen } from './src';
-import { CounterScreen } from './src/screens/CounterScreen';
-
+import {SafeAreaView, StyleSheet} from 'react-native';
+import {
+  BoxObjectModelScreen,
+  DimensionesScreen,
+  FlexScreen,
+  PositionScreen,
+} from './src';
 
 export const App = () => {
-  return(
+  return (
     <SafeAreaView style={styles.container}>
       {/* <DimensionesScreen/> */}
-      <PositionScreen/>
+      {/* <PositionScreen/> */}
+      <FlexScreen />
       {/* <BoxObjectModelScreen/> */}
     </SafeAreaView>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
-  container:{
-      flex:1,
-      backgroundColor:'white'
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
   },
-})
+});
