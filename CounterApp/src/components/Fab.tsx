@@ -38,7 +38,7 @@ export const Fab = ({title, onPress, position }:Props) => {
                     (position === "bl") ? styles.left : styles.right
                 ]}
             >
-                {/* Usamos touchableOpacity en IOS para los botones  */}
+                {/* Usamos touchableNativeFeedback */}
 
                 <TouchableNativeFeedback
                     onPress={onPress}
