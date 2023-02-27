@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   boxThree: {
     backgroundColor: 'yellow',
     borderColor:'black',
-    borderWidth:2
+    borderWidth:2,
+    alignSelf:'flex-start',
   },
 });

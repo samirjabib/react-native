@@ -4,6 +4,7 @@ import {
   DimensionesScreen,
   FlexScreen,
   PositionScreen,
+  TareaScreen
 } from './src';
 
 export const App = () => {
@@ -11,7 +12,8 @@ export const App = () => {
     <SafeAreaView style={styles.container}>
       {/* <DimensionesScreen/> */}
       {/* <PositionScreen/> */}
-      <FlexScreen />
+      <TareaScreen/>
+      {/* <FlexScreen /> */}
       {/* <BoxObjectModelScreen/> */}
     </SafeAreaView>
   );
