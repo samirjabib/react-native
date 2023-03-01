@@ -1,4 +1,4 @@
-import { View, Text, Button } from 'react-native';
+import { View, Button } from 'react-native';
 
 interface Props extends NativeStackScreenProps<any, any> {} //Tipamos nuestras props de los metodos de react nativae
 import {NativeStackScreenProps} from '@react-navigation/native-stack';

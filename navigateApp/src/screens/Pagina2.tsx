@@ -1,5 +1,5 @@
 import { View, Text, Button } from 'react-native';
-
+import { useEffect} from 'react'
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/core';
 
@@ -8,6 +8,13 @@ import { useNavigation } from '@react-navigation/core';
 export const Pagina2 = () => {
 
   const navigator = useNavigation() // Con este hook podemos ir a la pagina que queramos. 
+
+
+  useEffect( () => {
+    navigator.setOptions({ //Con esto podemos sobrescribir las opciones del navigator 
+      title:'Regresar'
+    })
+  }, [])
 
   return (
     <View>
