@@ -1,11 +1,19 @@
-import { View, Text, StyleSheet} from 'react-native'
+import { View, Text, StyleSheet, Button} from 'react-native'
+import { usePermissionsHook } from '../hooks/usePermissionsHook';
 
 export const PermissionsScreen = () => {
+
+    const { onCheckLocationPermissions, locationStatus } = usePermissionsHook()
+
+    
+
     return(
         <View style={stlyes.container}>
             <Text style={stlyes.title}>
-                Soy el PermissonsScreen Screen
+                {JSON.stringify(locationStatus)}
             </Text>
+
+            <Button title="Permiso" onPress={onCheckLocationPermissions}/>
         </View>
     )
 }
@@ -17,7 +25,7 @@ const stlyes = StyleSheet.create({
         alignItems:'center'
     },
     title:{
-        fontSize:30,
+        fontSize:20,
         color:'black'
     }
 })
