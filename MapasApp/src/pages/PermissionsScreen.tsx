@@ -1,19 +1,21 @@
 import { View, Text, StyleSheet, Button} from 'react-native'
 import { usePermissionsHook } from '../hooks/usePermissionsHook';
+import { BlackButton } from '../components';
 
 export const PermissionsScreen = () => {
 
     const { onCheckLocationPermissions, locationStatus } = usePermissionsHook()
 
-    
+
 
     return(
         <View style={stlyes.container}>
+            <Text style={stlyes.title}> Para usar esta aplicacion necesitas Activar el GPS</Text>
             <Text style={stlyes.title}>
-                {JSON.stringify(locationStatus)}
+                STATUS:{JSON.stringify(locationStatus)}
             </Text>
 
-            <Button title="Permiso" onPress={onCheckLocationPermissions}/>
+            <BlackButton title="Permiso" onPress={onCheckLocationPermissions}/>
         </View>
     )
 }
@@ -25,7 +27,8 @@ const stlyes = StyleSheet.create({
         alignItems:'center'
     },
     title:{
-        fontSize:20,
-        color:'black'
+        fontSize:15,
+        color:'black',
+        marginBottom:10,
     }
 })
