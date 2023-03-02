@@ -1,15 +1,20 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { MapScreen, NotificationScreen } from '../pages';
-
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {MapScreen, PermissionsScreen} from '../pages';
 
 const Stack = createNativeStackNavigator();
 
-export const Navigator = () =>  {
+export const Navigator = () => {
   return (
-      <Stack.Navigator>
-        <Stack.Screen name="MapScreen" component={MapScreen} />
-        <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
-      </Stack.Navigator>
+    <Stack.Navigator
+      initialRouteName="PermissionsScreen"
+      screenOptions={{
+        headerShown: false,
+        contentStyle: {
+          backgroundColor: 'white',
+        },
+      }}>
+      <Stack.Screen name="PermissionsScreen" component={PermissionsScreen} />
+      <Stack.Screen name="MapScreen" component={MapScreen} />
+    </Stack.Navigator>
   );
-}
-
+};

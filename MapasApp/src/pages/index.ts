@@ -1,2 +1,2 @@
 export * from './MapScreen';
-export * from './NotificationScreen';
+export * from './PermissionsScreen';

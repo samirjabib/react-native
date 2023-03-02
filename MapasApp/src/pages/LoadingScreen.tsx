@@ -1,10 +1,10 @@
 import { View, Text} from 'react-native'
 
-export const NotificationScreen = () => {
+export const LoadingScreen = () => {
     return(
         <View>
             <Text>
-                Soy el notification Screen
+                Soy el loading
             </Text>
         </View>
     )
