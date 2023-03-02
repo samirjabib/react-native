@@ -1,7 +1,7 @@
 import { View, Text, Button } from 'react-native';
 import { useEffect} from 'react'
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/core';
+import { styles } from '../themes/globalStyles';
 
 
 
@@ -17,8 +17,14 @@ export const Pagina2 = () => {
   }, [])
 
   return (
-    <View>
-      <Button onPress={() =>  navigator.navigate('Pagina3')} title={'ir a pagina 2'} />
-    </View>
+    <View style={ styles.globalMargin }>
+    <Text style={styles.title }> Pagina2Screen </Text>
+
+    <Button 
+        title="Ir página 3"
+        onPress={ () => navigator.navigate('Pagina3')  }
+    />
+
+</View>
   );
 };

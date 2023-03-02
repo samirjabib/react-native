@@ -11,11 +11,13 @@ import {
 } from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native'; //Envolvemos las las rutas con esto para poder navegar entre ellas
+import { MenuLateralBasico } from './src/navigator/MenuLateralBasico';
 
 function App(): JSX.Element {
   return (
       <NavigationContainer>
-        <StackNavigator />
+        {/* <StackNavigator/> */}
+        <MenuLateralBasico/>
       </NavigationContainer>
   );
 }
