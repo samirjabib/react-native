@@ -14,7 +14,7 @@ export const MenuLateralBasico = () => {
     <Drawer.Navigator
       screenOptions={{
         drawerType: dimensions.width >= 768 ? 'permanent' : 'front',
-      }},
+      }}
     >
             {/* Podemos cambiar el nombre que se muestra con la propiedad title  */}
         <Drawer.Screen name="StackNavigator" options={{title:'Home'}} component={StackNavigator}/>  

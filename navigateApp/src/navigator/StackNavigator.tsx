@@ -19,8 +19,10 @@ export const StackNavigator = () => {
   return (
     <StackRootNavigator.Navigator
       screenOptions={{
-        headerShadowVisible: true,
-      }}>
+        headerShown:false        
+      }}
+    
+      >
       <StackRootNavigator.Screen
         name="Pagina1" //tneemos que poner el mismo nombre del componente
         options={{title: 'Pagina 1'}} //Nos permite poner title en el header provicional
