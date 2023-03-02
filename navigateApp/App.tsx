@@ -16,8 +16,7 @@ import { MenuLateralBasico } from './src/navigator/MenuLateralBasico';
 function App(): JSX.Element {
   return (
       <NavigationContainer>
-        {/* <StackNavigator/> */}
-        <MenuLateralBasico/>
+       < MenuLateralBasico/>
       </NavigationContainer>
   );
 }

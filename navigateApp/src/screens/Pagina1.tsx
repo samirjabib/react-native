@@ -1,11 +1,22 @@
 import {View, Text, StyleSheet, Button, TouchableOpacity} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {styles} from '../themes/globalStyles';
+import { useEffect } from 'react';
 
 interface Props extends NativeStackScreenProps<any, any> {} //Tipamos nuestras props de los metodos de react nativae
 
 export const Pagina1 = ({navigation}: Props) => {
   //desestructuramos el componente navigation que nos trae varios metodos.
+
+ useEffect( () => {
+  //De esta manera podemos agregar el menu en la parte del header que nosotros queramos
+  navigation.setOptions ({
+    headerLeft: () => (
+      <Button title='Home'/>
+    )
+  })
+  
+ }, [])
 
   return (
     <View style={styles.globalMargin}>
