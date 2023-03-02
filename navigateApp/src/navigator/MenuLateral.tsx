@@ -62,7 +62,7 @@ const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
       <View style={{backgroundColor: 'red'}}>
         <TouchableOpacity
           style={{marginVertical: 30, marginHorizontal: 30}}
-          onPress={() => navigation.navigate('StackNavigator')}>
+          onPress={() => navigation.navigate('Tabs')}>
           <Text style={{fontSize: 20, borderWidth: 4, color: 'black'}}>
             Navegacion
           </Text>

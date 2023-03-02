@@ -15,13 +15,12 @@ export type RootStackParams = {
 const StackRootNavigator = createNativeStackNavigator<RootStackParams>(); //creamos las rutas nativas
 
 export const StackNavigator = () => {
-  console.log('hola');
   return (
     <StackRootNavigator.Navigator
       screenOptions={{
-        headerShown:false        
+        headerShown:false,
       }}
-    
+      
       >
       <StackRootNavigator.Screen
         name="Pagina1" //tneemos que poner el mismo nombre del componente
