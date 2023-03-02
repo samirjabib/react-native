@@ -1,9 +1,9 @@
 import {View, Text, StyleSheet, Button, TouchableOpacity} from 'react-native';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {styles} from '../themes/globalStyles';
 import { useEffect } from 'react';
+import { DrawerScreenProps } from '@react-navigation/drawer';
 
-interface Props extends NativeStackScreenProps<any, any> {} //Tipamos nuestras props de los metodos de react nativae
+interface Props extends DrawerScreenProps<any, any> {} //Tipamos nuestro drawer
 
 export const Pagina1 = ({navigation}: Props) => {
   //desestructuramos el componente navigation que nos trae varios metodos.
@@ -12,7 +12,7 @@ export const Pagina1 = ({navigation}: Props) => {
   //De esta manera podemos agregar el menu en la parte del header que nosotros queramos
   navigation.setOptions ({
     headerLeft: () => (
-      <Button title='Home'/>
+      <Button title='Home' onPress={() => navigation.toggleDrawer()}/>
     )
   })
   
