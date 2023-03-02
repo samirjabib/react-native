@@ -7,6 +7,7 @@ import {
 } from '@react-navigation/drawer';
 import {Image, Text, useWindowDimensions, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import { Tabs } from './Tabs';
 
 const Drawer = createDrawerNavigator(); //CREAMOS EL SIDEBAR
 
@@ -33,7 +34,7 @@ export const MenuLateral = () => {
       )} //enviamos mediante props
     >
       {/* Podemos cambiar el nombre que se muestra con la propiedad title  */}
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+      <Drawer.Screen name="Tabs" component={Tabs} />
       <Drawer.Screen name="SettingsPagina" component={SettingsPagina} />
     </Drawer.Navigator>
   );
