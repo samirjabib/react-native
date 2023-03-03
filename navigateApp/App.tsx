@@ -19,7 +19,8 @@ function App(): JSX.Element {
       <NavigationContainer
       
       >
-       <MenuLateral/>
+      <StackNavigator/>
+       {/* <MenuLateral/> */}
       </NavigationContainer>
   );
 }

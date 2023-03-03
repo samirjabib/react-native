@@ -1,6 +1,0 @@
-export * from './CounterScreen'
-export * from './BoxObjectModelScreen'
-export * from './DimensionesScreen'
-export * from './PositionScreen'
-export * from './FlexScreen'
-export * from './TareaScreen'

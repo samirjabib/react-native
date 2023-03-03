@@ -1,16 +1,15 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {MapScreen, PermissionsScreen} from '../pages';
-import { usePermissionsHook } from '../hooks/usePermissionsHook';
-import { LoadingScreen } from '../pages/LoadingScreen';
+import {usePermissionsHook} from '../hooks/usePermissionsHook';
+import {LoadingScreen} from '../pages/LoadingScreen';
 
 const Stack = createNativeStackNavigator();
 
 export const Navigator = () => {
+  const {locationStatus} = usePermissionsHook();
 
-  const { locationStatus } = usePermissionsHook()
-
-  if(locationStatus === 'unavailable'){
-    return <LoadingScreen/>
+  if (locationStatus === 'unavailable') {
+    return <LoadingScreen />;
   }
 
   return (
@@ -22,8 +21,11 @@ export const Navigator = () => {
           backgroundColor: 'white',
         },
       }}>
-      <Stack.Screen name="PermissionsScreen" component={PermissionsScreen} />
-      <Stack.Screen name="MapScreen" component={MapScreen} />
+      {locationStatus === 'granted' ? (
+        <Stack.Screen name="MapScreen" component={MapScreen} />
+      ) : (
+        <Stack.Screen name="PermissionsScreen" component={PermissionsScreen} />
+      )}
     </Stack.Navigator>
   );
 };

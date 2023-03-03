@@ -137,7 +137,16 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
+        
     }
+
+            
+    buildscript {
+        dependencies {
+            classpath "com.google:plugin:0.6.1"
+        }
+    }
+
 
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
@@ -153,8 +162,11 @@ android {
             }
 
         }
+
+        }
     }
-}
+
+
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
@@ -174,5 +186,7 @@ dependencies {
         implementation jscFlavor
     }
 }
+
+
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
